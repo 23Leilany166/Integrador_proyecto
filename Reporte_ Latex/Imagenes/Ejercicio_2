@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Ejercicio numero 2}
+\author{LEILANY AISLINN SANCHEZ REYES}
+\date{November 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Solución del ejercicio número 2}
+\begin{itemize}
+    \item Descripción del problema:
+\end{itemize}
+-Dada una ecuación cuadrática  regresar los valores de las raíces y en caso de que estén sobre los números reales , en caso contrario indicar que la solución está dentro del conjunto de los números complejos.
+    Definición de la solución: 
+   \begin{enumerate}
+       \item -Lo que nos pide  encontrar  es la  solución  de una ecuación cuadrática y si las raíces  pertenecen a los números reales, o  en caso contrario a los números complejos, estaremos utilizando  la fórmula cuadrática también conocida como la fórmula general para resolver el problema.
+   \end{enumerate}
+     \centering
+      \includegraphics[width=0.5\linewidth]{Formula general.jpg}
+
+ 
+\begin{itemize}
+    \item Lo primero que voy a definir es el nombre del problema:
+\end{itemize}
+\begin{itemize}
+    \item integrador ejercicio 2:
+\end{itemize}
+\begin{itemize}
+    \item Después diseñaremos el diagrama de flujo para guiarnos al momento de realizar el código ya que recordemos que los diagramas de flujos son una herramienta  gráfica que nos ayuda a visualizar  la solución para resolver el problema.
+\end{itemize}
+
+    \centering
+    \includegraphics[width=0.5\linewidth]{Diagrama_Integrador.png}
+    
+    \begin{itemize}
+        \item Después lo que  vamos a solicitar son  los valores  de los coeficientes de a,b y c de una ecuación cuadrática y declarar las raíces x1 y x2.
+    \end{itemize}
+    \centering
+    \includegraphics[width=0.5\linewidth]{valores.png}
+
+    \begin{itemize}
+        \item Después vamos a calcular el discriminante (fórmula general),  con la fórmula  \(b^2 - 4ac\)  esta fórmula nos ayudará a determinar el resultado de las raíces.
+    \end{itemize}
+    \centering
+    \includegraphics[width=0.5\linewidth]{discrminante.png}
+
+\begin{itemize}
+    \item Después el programa verificará el valor  de las raíces  que tiene la evaluación cuadrática x1,x2  entonces vamos a tomar una decisión,  si discriminante>0 va tener dos raíces que son x1,x2 y va a pertenecer a los números reales utilizando la fórmula general.
+\end{itemize}
+    \centering
+    \includegraphics[width=0.5\linewidth]{reales.png}
+    \begin{itemize}
+        \item Después vamos a tomar otra decisión,  si discriminante=0 tiene una sola raíz   en este caso estaremos  utilizando x2 como la raíz .
+    \end{itemize}
+    \centering
+    \includegraphics[width=0.5\linewidth]{una raiz.png}
+    \begin{itemize}
+        \item Y por último si la condición no cumple con ninguna de las dos condiciones el número va a pertenecer a los números complejos.
+    \end{itemize}
+        \centering
+        \includegraphics[width=0.5\linewidth]{complejos.png}
+        \begin{itemize}
+            \item Una vez diseñado el código vamos a realizar una serie de pruebas para ver si la solución de nuestro problema es correcta.
+        \end{itemize}
+        \section{Ejercicios de prueba}
+        \begin{itemize}
+            \item La ecuación
+        \end{itemize}
+        $x^2 - 2x + 1 = 0$ 
+        tiene como soluciones:
+
+\[x = \frac{-(-2) \pm \sqrt{(-2)^2 - 4 \cdot 1 \cdot 1}}{2 \cdot 1}\]
+\[x = \frac{2 \pm \sqrt{4 - 4}}{2}\]
+\[x = \frac{2 \pm \sqrt{0}}{2}\]
+
+Las soluciones son:
+
+\[x = \frac{2 + \sqrt{0}}{2} = \frac{2}{2} = 1\]
+\[x = \frac{2 - \sqrt{0}}{2} = \frac{2}{2} = 1\]
+    \centering
+    \includegraphics[width=0.5\linewidth]{prueba1.png}
+
+ 
+\begin{itemize}
+    \item La ecuación
+\end{itemize}
+$x^2 + x + 1 = 0$ puede resolverse utilizando la fórmula cuadrática:
+
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+ Donde $a = 1$, $b = 1$ y $c = 1$. 
+    Reemplazando los valores en la fórmula:
+
+
+\[
+x = \frac{-(1) \pm \sqrt{(1)^2 - 4(1)(1)}}{2(1)}
+\]
+
+Simplificando:
+
+\[
+x = \frac{-1 \pm \sqrt{1 - 4}}{2}
+\]
+
+\[
+x = \frac{-1 \pm \sqrt{-3}}{2}
+\]
+
+Por lo tanto, las soluciones de la ecuación $x^2 + x + 1 = 0$ son raíces complejas:
+
+\[
+x = \frac{-1 \pm i\sqrt{3}}{2}
+\]
+    \centering
+    \includegraphics[width=0.5\linewidth]{prueba2.png}
+  
+
+\begin{itemize}
+    \item La ecuación $x^2 - 7x - 18 = 0$ se resuelve usando la fórmula general:
+\end{itemize}
+
+\[ x = \frac{-(-7) \pm \sqrt{(-7)^2 - 4 \cdot 1 \cdot (-18)}}{2 \cdot 1} \]
+
+Simplificando la ecuación:
+
+\[ x = \frac{7 \pm \sqrt{49 + 72}}{2} \]
+
+\[ x = \frac{7 \pm \sqrt{121}}{2} \]
+
+\[ x = \frac{7 \pm 11}{2} \]
+
+Por lo tanto, las soluciones son:
+
+\[ x_1 = \frac{7 + 11}{2} = 9 \]
+\[ x_2 = \frac{7 - 11}{2} = -2 \]
+        \centering
+        \includegraphics[width=0.5\linewidth]{prueba3.png}
+  
+      
+    \section{Conclusión personal}
+    Fue muy interesante ver cómo nos ponemos al límite, y si hubo momentos donde ya no quería hacer el codigo por que no me salia pero recordaba que yo puedo más que cualquier prueba, si tal vez no me va  a salir a la primera pero me va a terminar saliendo y me parece que el integrador fue para probarnos a nosotros mismos que tanto podíamos hacer.
+    Se me complicó un poco sí porque son cosas que yo en preparatoria no vi pero hubo gente que me estuvo apoyando y guiando y nada me gustó mucho aprendí mucho y lo más importante me provee a mí misma.
+\end{document}
